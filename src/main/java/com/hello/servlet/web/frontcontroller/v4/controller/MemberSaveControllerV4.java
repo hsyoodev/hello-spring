@@ -16,8 +16,9 @@ public class MemberSaveControllerV4 implements ControllerV4 {
 
         Member member = new Member(username, age);
         memberRepository.save(member);
-
+        
         model.put("member", member);
+
         return "save-result";
     }
 }
