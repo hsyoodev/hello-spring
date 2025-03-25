@@ -5,11 +5,13 @@
     <title>Title</title>
 </head>
 <body>
+
 <h1>LocalDateTime</h1>
 <ul>
     <li>default = <span th:text="${localDateTime}"></span></li>
     <li>yyyy-MM-dd HH:mm:ss = <span th:text="${#temporals.format(localDateTime,'yyyy-MM-dd HH:mm:ss')}"></span></li>
 </ul>
+
 <h1>LocalDateTime - Utils</h1>
 <ul>
     <li>${#temporals.day(localDateTime)} = <span th:text="${#temporals.day(localDateTime)}"></span></li>
@@ -28,5 +30,6 @@
     <li>${#temporals.second(localDateTime)} = <span th:text="${#temporals.second(localDateTime)}"></span></li>
     <li>${#temporals.nanosecond(localDateTime)} = <span th:text="${#temporals.nanosecond(localDateTime)}"></span></li>
 </ul>
+
 </body>
 </html>

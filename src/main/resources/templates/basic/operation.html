@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+
 <ul>
     <li>산술 연산
         <ul>
@@ -12,6 +13,7 @@
             <li>10 % 2 == 0 = <span th:text="10 % 2 == 0"></span></li>
         </ul>
     </li>
+
     <li>비교 연산
         <ul>
             <li>1 > 10 = <span th:text="1 &gt; 10"></span></li>
@@ -22,11 +24,13 @@
             <li>1 != 10 = <span th:text="1 != 10"></span></li>
         </ul>
     </li>
+
     <li>조건식
         <ul>
             <li>(10 % 2 == 0)? '짝수':'홀수' = <span th:text="(10 % 2 == 0)? '짝수':'홀수'"></span></li>
         </ul>
     </li>
+
     <li>Elvis 연산자
         <ul>
             <li>${data}?: '데이터가 없습니다.' = <span th:text="${data}?: '데이터가 없습니다.'"></span></li>
@@ -34,6 +38,7 @@
             </li>
         </ul>
     </li>
+
     <li>No-Operation
         <ul>
             <li>${data}?: _ = <span th:text="${data}?: _">데이터가 없습니다.</span></li>
@@ -41,5 +46,6 @@
         </ul>
     </li>
 </ul>
+
 </body>
 </html>
