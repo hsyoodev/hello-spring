@@ -3,6 +3,7 @@ package com.hello.springmvc.web.form;
 import com.hello.springmvc.domain.item.Item;
 import com.hello.springmvc.domain.item.ItemRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
+@Slf4j
 @Controller
 @RequestMapping("/form/items")
 @RequiredArgsConstructor
@@ -40,6 +42,8 @@ public class FormItemController {
 
     @PostMapping("/add")
     public String addItem(@ModelAttribute Item item, RedirectAttributes redirectAttributes) {
+        log.info("item.open = {}", item.getOpen());
+
         Item savedItem = itemRepository.save(item);
 
         redirectAttributes.addAttribute("itemId", savedItem.getId());
@@ -60,7 +64,7 @@ public class FormItemController {
     @PostMapping("/{itemId}/edit")
     public String edit(@PathVariable Long itemId, @ModelAttribute Item item) {
         itemRepository.update(itemId, item);
-        
+
         return "redirect:/form/items/{itemId}";
     }
 
