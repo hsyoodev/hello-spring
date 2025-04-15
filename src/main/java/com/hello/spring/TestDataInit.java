@@ -1,7 +1,8 @@
-package com.hello.springmvc;
+package com.hello.spring;
 
-import com.hello.springmvc.domain.item.Item;
-import com.hello.springmvc.domain.item.ItemRepository;
+
+import com.hello.spring.domain.item.Item;
+import com.hello.spring.domain.item.ItemRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
