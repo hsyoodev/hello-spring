@@ -1,10 +1,10 @@
-package hello.itemservice;
+package com.hello.spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringApplicationTests {
+class SpringApplicationTest {
 
     @Test
     void contextLoads() {
