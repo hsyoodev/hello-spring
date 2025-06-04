@@ -1,6 +1,5 @@
 package com.hello.spring;
 
-
 import com.hello.spring.domain.item.Item;
 import com.hello.spring.domain.item.ItemRepository;
 import jakarta.annotation.PostConstruct;

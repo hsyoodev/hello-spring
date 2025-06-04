@@ -1,16 +1,13 @@
-package com.hello.spring.domain.web.validation.form;
+package com.hello.spring.web.item.form;
 
-import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
 @Data
-public class ItemUpdateForm {
-
-    @NotNull
-    private Long id;
+public class ItemSaveForm {
 
     @NotBlank
     private String itemName;
@@ -20,7 +17,7 @@ public class ItemUpdateForm {
     private Integer price;
 
     @NotNull
-    @Min(0)
+    @Max(value = 9999)
     private Integer quantity;
 
 }
