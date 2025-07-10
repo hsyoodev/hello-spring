@@ -2,6 +2,7 @@ package com.hello.spring.web;
 
 import com.hello.spring.domain.member.Member;
 import com.hello.spring.domain.member.MemberRepository;
+import com.hello.spring.web.argumentresolver.Login;
 import com.hello.spring.web.session.SessionManager;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -77,7 +78,7 @@ public class HomeController {
         return "loginHome";
     }
 
-    @GetMapping("/")
+    //    @GetMapping("/")
     public String homeLoginV4(@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) Member loginMember, Model model) {
         if (loginMember == null) {
             return "home";
@@ -88,4 +89,14 @@ public class HomeController {
         return "loginHome";
     }
 
+    @GetMapping("/")
+    public String homeLoginV3ArgumentResolver(@Login Member loginMember, Model model) {
+        if (loginMember == null) {
+            return "home";
+        }
+
+        model.addAttribute("member", loginMember);
+
+        return "loginHome";
+    }
 }

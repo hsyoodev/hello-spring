@@ -113,7 +113,7 @@ public class LoginController {
         HttpSession session = request.getSession();
         session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
 
-        return "redirect:/" + redirectURI;
+        return "redirect:" + redirectURI;
     }
 
     //    @PostMapping("/logout")
